@@ -1,0 +1,548 @@
+/*importação de fontes externas*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/*Declaração de cores criando variaveis*/
+:root{
+    --vermelho-principal: #CA1C2A;
+    --azul-titulo: #003B71;
+    --azul-botao-titulos-cards: #0170b9;
+    --dark: #1f2224;
+    --container-formulario: #001f3df8;
+    --background-body-dark: #1b1b1b;
+    --header-and-container: #003b71;
+    --form-dark-plus: #001e3db6;
+
+}
+/*todo o conteúdo da pagina*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+#corpo{
+    animation: dark-to-light-body 0.5s ease-in-out;
+    overflow-x: hidden;
+}
+/*cabecalho/menu*/
+#cabecalho{
+    background-color: var(--azul-botao-titulos-cards);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 1px 5px #00000068;
+    animation: dark-to-light-header 0.5s ease-in-out;
+    height: 100px;
+    position: fixed;
+    top: -2px;
+}
+#cabecalho img{
+    width: 500px;
+    height: 105px;
+    position: relative;
+    top: -2px;
+}
+.nav-area{
+    display: flex;
+
+}
+#nav-list{
+    animation: dark-to-light-nav 0.5s ease-in-out;
+}
+.menu-items{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 5px ;
+    transition: 0.2s;
+    padding: 5px;
+    flex-direction: column;
+}
+.menu-items:hover{
+    display: flex;
+    transform: scale(1.1);
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+/*container-pai-forma-area / div maior que armazena o campo do formulário e a div da modavo*/
+#conteudo{
+    padding-top: 150px;
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+}
+/*container pai*/
+.container-form{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.378);
+}
+/*div lado esquerdo com o logo*/
+.logo-img{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: baseline;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #fdfdfd;
+    animation: dark-to-light-img-form 0.5s ease-in-out;
+}
+.content-left{
+    color: #000;
+    text-align: justify;
+    padding: 5px;
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+.content-left p{
+    margin-top: 10px;
+}
+.content-left ul{
+    margin-top: 10px;
+}
+.content-left a{
+    color: #fff;
+    font-weight: bolder;
+}
+.logo-img img{
+    width: 350px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 1px 8px 10px #00000050;
+}
+/*div formulario(div lado direito)*/
+.form-box{
+    background-color: var(--azul-botao-titulos-cards);
+    color: #fff;
+    font-size: 16pt;
+    width: 50%;
+    display: flex;
+    justify-content: baseline;
+    flex-direction: column;
+    padding: 2rem;
+    animation: dark-to-light-form 0.5s ease-in-out;
+}
+/*titulo do formulario*/
+.form-header{
+    display: flex;
+    margin-bottom: 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-header h1::after{
+    content: '';
+    display: block;
+    width: 10rem;
+    height: 0.3rem;
+    background-color: #003B71;
+    margin: 0 auto;
+    border-radius: 10px;
+
+}
+.login-button{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap ;
+}
+.login-button button{
+    border: none;
+    background-color: var(--azul-titulo);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.login-button button:hover{
+    background-color: var(--vermelho-principal);
+    color: #fff;
+
+}
+.login-button a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size:16pt;
+    color: #fff;
+    transition: 0.2s;
+}
+.fa-solid{
+    cursor: pointer;
+    margin: 0px 10px;
+
+}
+/*div pai inputs*/
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+/*input-filhos*/
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin: 0.6rem 10px ;
+    width: 100%;
+      
+}
+
+.input-box input{
+    margin: 0.6rem 0;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 1px 5px 6px #00000050;
+}
+.input-box input:hover{
+    background-color: #d0d0d0;
+}
+.input-box input:focus-visible{
+    outline: 2px solid var(--dark);
+}
+.input-box label,
+.genero-title h6{
+    font-size: 0.90rem;
+    font-weight: 400;
+    color:#ffffff ;
+}
+.input-box input::placeholder{
+    color:#000000be ;
+}
+/*spans verificação*/
+#alert-senha{
+    font-size: 0.8rem;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+#alert-nome, #alert-nomeM,
+#alert-cep, #alert-logra,
+#alert-numero, #alert-bairro,
+#alert-cidade, #alert-cel,
+#alert-tel, #emailStatus,
+#senha-span, #form-condition{
+    font-size: 0.8rem;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+#alert-login{
+    display: none;
+    font-size: 0.8rem;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+/* validacao do login */
+#validacao{
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+/* span de numero de caracteres do login */
+#nCaractere{
+    font-size: 0.8rem;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+/* SPAN DO CPF */
+#toast {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+/* parte dos checkboxes do genero */
+.genero-grupos{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+}
+.genero-input{
+    display: flex;
+    align-items: center;
+    margin: auto 5px;
+}
+.genero-input input{
+    margin-right: 0.5rem;
+}
+.genero-input label{
+    font-weight: 300;
+    font-size: 1rem;
+}
+/*Parte da api do cep*/
+#apiCep{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* parte do botão enviar*/
+.button-submit{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.button-submit button{
+    padding: 1rem;
+    width: 50%;
+    cursor: pointer;
+    background-color: var(--azul-titulo);
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 2px 10px #00000050;
+}
+.button-submit button:hover{
+    border: 1px solid #ffffffb5;
+}
+.button-submit a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+/* div do span que diz se o formulário está corretamente preenchido */
+.alert-condition{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* span que diz se o formulário está corretamente preenchido */
+#form-condition{
+    color: #fff;
+}
+/*footer rodape*/
+footer {
+    margin-top: 50px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background-color: #343434;
+    flex-wrap: wrap;
+}
+.icons-container{
+    display: flex;
+    margin-top: 5px;
+}
+.icons-card{
+    display: inline-block;
+    margin-inline: 5px;
+}
+.icons-card a{
+    text-decoration: none;
+    color: #fff;
+}
+/*Mobile menu - button */
+.mobile-menu{
+    cursor: pointer;
+    display: none;
+   
+}
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
+}
+/*responsividade*/
+@media screen and (max-width: 1057px){
+    
+    .input-box{
+        width: 100%;
+    }
+    .genero-grupos{
+        flex-direction: column;
+    }
+    .genero-input{
+        margin: 2px;
+    }
+    .logo-img{
+        display: none;
+    }
+    .form-box{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 680px){
+    *{
+        margin: 0;
+        padding:0;
+    }
+    #cabecalho img{
+        width: 70%;
+    }
+    #cabecalho{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .mobile-menu{
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+    .menu-items{
+        display: flex;
+    }
+    .nav-area{
+        position: absolute;
+        top: 100px;
+        right: 0px;
+        width: 200px;
+        height: 500px;
+        background-color: #003B71;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-area.active{
+        transform: translateX(0);
+    }
+    .dropdown:hover .dropdown-menu{
+        top: 212px;
+        right: 50px;
+    }
+    .dark#nav-list{
+        background-color: #1b1b1b;
+        color: #016fb9;
+        animation: light-to-dark-nav 0.5s ease-in-out;
+    }
+}
+/* parte do header do formulário ao lado direito */
+    .form-header{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .login-button{
+        margin: 20px 5px;
+    }
+    .form-box{
+        padding: 1.2rem;
+    }
+
+/*dark-mode*/
+.dark#formulario{
+    background-color: #001f3df8;
+    animation: light-to-dark-form 0.5s ease-in-out;
+}
+.dark#corpo{
+    background-color: #1b1b1b;
+    animation: light-to-dark-body 0.5s ease-in-out;
+    overflow-x: hidden;
+}
+.dark#form-img{
+    background-color: #003B71;
+    animation: light-to-dark-img-form 0.5s ease-in-out;
+
+}
+.dark#cabecalho{
+    background-color: #003B71;
+    animation: light-to-dark-header 0.5s ease-in-out;
+}
+.dark#left-content{
+    color: #fff;
+}
+
+
+/*Animação para dark-mode*/
+/*BODY*/
+@keyframes light-to-dark-body{
+    0% {
+        background-color: #ffffff;
+    }
+    100%{
+        background-color: var(--background-body-dark);
+    }
+}
+@keyframes dark-to-light-body{
+    0% {
+        background-color: var(--background-body-dark);
+    }
+    100%{
+        background-color: #ffffff;
+    }
+}
+/*Formulario*/
+@keyframes light-to-dark-form{
+    0%{
+        background-color: #0170b9;
+    }
+    100%{
+        background-color: var(--container-formulario);
+    }
+}
+@keyframes dark-to-light-form{
+    0%{
+        background-color: var(--container-formulario);
+    }
+    100%{
+        background-color: var(--azul-botao-titulos-cards);
+    }
+}
+/*div-direita-img-dolado do form*/
+@keyframes light-to-dark-img-form{
+    0%{
+        background-color: #fdfdfd;
+    }
+    100%{
+        background-color: var(--header-and-container);
+    }
+}
+@keyframes dark-to-light-img-form{
+    0%{
+        background-color: var(--header-and-container);
+    }
+    100%{
+        background-color: #fdfdfd;
+    }
+}
+/*cabecalho*/
+@keyframes light-to-dark-header{
+    0%{
+        background-color: var(--azul-botao-titulos-cards);
+    }
+    100%{
+        background-color: var(--header-and-container);
+    }
+}
+@keyframes dark-to-light-header{
+    0%{
+        background-color: var(--header-and-container);
+    }
+    100%{
+        background-color: var(--azul-botao-titulos-cards);
+    }
+}
+/*nav-area-mobile*/
+@keyframes light-to-dark-nav{
+    0%{
+        background-color: var(--azul-botao-titulos-cards);
+    }
+    100%{
+        background-color: #1b1b1b;
+    }
+}
+@keyframes dark-to-light-nav{
+    0%{
+        background-color: #1b1b1b;
+    }
+    100%{
+        background-color: var(--azul-botao-titulos-cards);
+    }
+}

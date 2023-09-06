@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CPaaS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="https://t147f2.p3cdn1.secureserver.net/wp-content/uploads/2022/04/icone.png?time=1687668428" sizes="32x32">
+    <link rel="icon" href="https://t147f2.p3cdn1.secureserver.net/wp-content/uploads/2022/04/icone.png?time=1687668428" sizes="192x192">
+</head>
+<body id="corpo">
+    <header id="cabecalho">
+        <img src="../images/logo-modavo-2.png" alt="logo-telecall-menu">
+        <div class="mobile-menu" id="button-mobile">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-area" id="nav-list">
+            <a class="menu-items" href="../index.html"><i class="fa-solid fa-house fa-xl"></i></a>
+            <a class="menu-items" href="cadastro.html">Cadastro</a>
+            <i id="mode-icon" class="fa-solid fa-moon fa-2xl"></i>
+        </nav>
+    </header>
+    <!-- div que contém todo o conteudo do login -->
+    <div id="area-container">
+        <div class="container" id="formulario">
+            <div class="header-container">
+                <h1>Login</h1>
+            </div>
+            <!-- div que controla a area que os inputs ocupam -->
+            <div class="input-area">
+            <form id="form">
+                <div class="input-group">
+                    <label for="login">Login</label>
+                    <input type="text" id="login" placeholder="Digite seu login" required>
+                </div>
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="password" id="senha" placeholder="Digite aqui a sua senha" required>
+                    <span id="alert-login"></span>
+                </div>
+                <div class="input-group button-login">
+                    <input type="submit" value="Login" id="button">
+                    <a href="cadastro.html" id="link-cadastro">Cadastrar novo usuário</a>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <!-- rodape -->
+    <footer>
+        <div class="img-footer">
+            <img src="../images/telecall-logo-white-1.png">
+        </div>
+    
+        <div class="icons-container">
+            <div class="icons-card">
+                <a target="_blank" href="https://www.linkedin.com/company/telecall/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+            </div>
+            <div class="icons-card">
+                <a target="_blank" href="https://www.instagram.com/telecallbr/"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            </div>
+            <div class="icons-card">
+                <a target="_blank" href="https://www.facebook.com/TelecallBr"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+            </div>
+            <div class="icons-card">
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=552130301010&text=%23Comercial"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- scripts -->
+    <script src="../script/dark-mode.js"></script>
+    <script src="../script/menuMobile.js"></script>
+    <script src="../script/login.js"></script>
+</body>
+</html>
